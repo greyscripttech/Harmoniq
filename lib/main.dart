@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+<<<<<<< Updated upstream
+=======
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+>>>>>>> Stashed changes
 import 'core/theme.dart';
 import 'screens/home_screen.dart';
 
@@ -11,6 +15,7 @@ class HarmoniqApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< Updated upstream
     return MaterialApp(
       title: 'Harmoniq',
       debugShowCheckedModeBanner: false,
@@ -18,6 +23,22 @@ class HarmoniqApp extends StatelessWidget {
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
       home: const HomeScreen(),
+=======
+    return ScreenUtilInit(
+      designSize: const Size(375, 812), // iPhone X resolution
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp(
+          title: 'Harmoniq',
+          debugShowCheckedModeBanner: false,
+          theme: AppTheme.lightTheme,
+          darkTheme: AppTheme.darkTheme,
+          themeMode: ThemeMode.system,
+          home: const HomeScreen(),
+        );
+      },
+>>>>>>> Stashed changes
     );
   }
 }
